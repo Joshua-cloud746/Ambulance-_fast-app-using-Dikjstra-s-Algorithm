@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps API</title>
+  <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+<h1>Joshua's Map</h1>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArgI5ulAEGKLKhQt-z6gzbpCUOkaj4bmg"></script>
+<script>
+      function initMap() {
+        var kakamega = {lat: -0.28119, lng: 34.75217};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: kakamega
+        });
+        var marker = new google.maps.Marker({
+          position: kakamega,
+          map: map
+        });
+      }
+    </script>
+<script async defer src="project.js"></script>
+</body>
+</html>
